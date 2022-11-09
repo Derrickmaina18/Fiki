@@ -19,16 +19,16 @@ class _LandingState extends State<Landing> {
             child: Column(
               children: <Widget>[
                 SizedBox(
-                  height: MediaQuery.of(context).size.height*0.03,
+                  height: MediaQuery.of(context).size.height * 0.03,
                 ),
-                 const Image(
-                      image: AssetImage('assets/walk.png'),
-                 ),
+                const Image(
+                  image: AssetImage('assets/walk.png'),
+                ),
                 SizedBox(
-                  height: MediaQuery.of(context).size.height*0.065,
+                  height: MediaQuery.of(context).size.height * 0.065,
                 ),
                 const Text(
-                    'Fiki.',
+                  'Fiki.',
                   style: TextStyle(
                     fontSize: 48,
                     fontWeight: FontWeight.w300,
@@ -36,7 +36,7 @@ class _LandingState extends State<Landing> {
                   ),
                 ),
                 SizedBox(
-                  height: MediaQuery.of(context).size.height*0.05,
+                  height: MediaQuery.of(context).size.height * 0.05,
                 ),
                 const Text(
                   'Our mission is to create transport\nsolutions, build logistics partnership\nand drive value.',
@@ -54,7 +54,7 @@ class _LandingState extends State<Landing> {
                   textAlign: TextAlign.center,
                 ),
                 SizedBox(
-                  height: MediaQuery.of(context).size.height*0.03,
+                  height: MediaQuery.of(context).size.height * 0.03,
                 ),
                 const Text(
                   'Who are you?',
@@ -64,42 +64,42 @@ class _LandingState extends State<Landing> {
                   ),
                 ),
                 SizedBox(
-                  height: MediaQuery.of(context).size.height*0.03,
+                  height: MediaQuery.of(context).size.height * 0.03,
                 ),
                 Container(
-                  width: MediaQuery.of(context).size.width*0.7,
-                  height: MediaQuery.of(context).size.height*0.05,
+                  width: MediaQuery.of(context).size.width * 0.7,
+                  height: MediaQuery.of(context).size.height * 0.05,
                   child: ElevatedButton(
-                      onPressed: (){
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(builder: (context) => regis()),
-                        );
-                      },
-                      child: const Text(
-                          'User',
-                        style: TextStyle(
-                          fontSize: 20,
-                          fontWeight: FontWeight.w300,
-                        ),
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => regis()),
+                      );
+                    },
+                    child: const Text(
+                      'User',
+                      style: TextStyle(
+                        fontSize: 20,
+                        fontWeight: FontWeight.w300,
                       ),
+                    ),
                     style: ElevatedButton.styleFrom(
                       elevation: 4,
                       primary: const Color(0xFF3FBDF1),
-                      shape:  RoundedRectangleBorder(
+                      shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(12),
                       ),
                     ),
                   ),
                 ),
                 SizedBox(
-                  height: MediaQuery.of(context).size.height*0.03,
+                  height: MediaQuery.of(context).size.height * 0.03,
                 ),
                 Container(
-                  width: MediaQuery.of(context).size.width*0.7,
-                  height: MediaQuery.of(context).size.height*0.05,
+                  width: MediaQuery.of(context).size.width * 0.7,
+                  height: MediaQuery.of(context).size.height * 0.05,
                   child: ElevatedButton(
-                    onPressed: (){
+                    onPressed: () {
                       Navigator.push(
                         context,
                         MaterialPageRoute(builder: (context) => regis()),
@@ -107,15 +107,13 @@ class _LandingState extends State<Landing> {
                     },
                     child: const Text(
                       'Rider',
-                      style: TextStyle(
-                        fontSize: 20,
-                          fontWeight: FontWeight.w300
-                      ),
+                      style:
+                          TextStyle(fontSize: 20, fontWeight: FontWeight.w300),
                     ),
                     style: ElevatedButton.styleFrom(
                       elevation: 4,
                       primary: const Color(0xFF3FBDF1),
-                      shape:  RoundedRectangleBorder(
+                      shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(12),
                       ),
                     ),

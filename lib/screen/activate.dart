@@ -19,7 +19,7 @@ class _pin_activateState extends State<pin_activate> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Padding(
+            const Padding(
               padding: const EdgeInsets.all(18.0),
               child: const Image(image: AssetImage('assets/back.png')),
             ),
@@ -27,7 +27,7 @@ class _pin_activateState extends State<pin_activate> {
               child: Stack(
                 alignment: Alignment.bottomCenter,
                 children: [
-                  Image(
+                  const Image(
                     image: AssetImage('assets/pinauth.png'),
                   ),
                   Container(
@@ -35,11 +35,41 @@ class _pin_activateState extends State<pin_activate> {
                     //color: Colors.white,
                     width: MediaQuery.of(context).size.width * 0.8,
                     height: MediaQuery.of(context).size.height * 0.1,
-                    child: Text(
-                      'Fill the Code',
-                      style: TextStyle(
-                        backgroundColor: Colors.grey.shade100,
-                        fontSize: 30,
+                    child: RichText(
+                      textAlign: TextAlign.center,
+                      // style: TextStyle(
+                      //   backgroundColor: Colors.grey.shade100,
+                      //   fontSize: 30,
+                      // ),
+                      text: const TextSpan(
+                        children: [
+                          TextSpan(
+                            text: "We just sent a code to",
+                            style: TextStyle(
+                              color: Colors.black,
+                              backgroundColor: Colors.white,
+                              //fontSize: 13,
+                            ),
+                          ),
+                          TextSpan(
+                            text: " 0712345678",
+                            style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              color: Colors.black,
+                              backgroundColor: Colors.white,
+                              //fontSize: 13,
+                            ),
+                          ),
+                          TextSpan(
+                            text: "\n Enter the code here",
+                            style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              color: Colors.black,
+                              backgroundColor: Colors.white,
+                              //fontSize: 13,
+                            ),
+                          ),
+                        ],
                       ),
                     ),
                   ),
@@ -54,7 +84,7 @@ class _pin_activateState extends State<pin_activate> {
                 children: <Widget>[
                   PinCodeFields(
                     length: 4,
-                    fieldBorderStyle: FieldBorderStyle.Square,
+                    fieldBorderStyle: FieldBorderStyle.Bottom,
                     responsive: false,
                     fieldHeight: 60,
                     fieldWidth: 60,
@@ -62,7 +92,7 @@ class _pin_activateState extends State<pin_activate> {
                     //activeBackgroundColor: Color(0xFF3FBDF1),
                     keyboardType: TextInputType.number,
                     borderColor: Colors.grey,
-                    borderRadius: BorderRadius.circular(12),
+                    //borderRadius: BorderRadius.circular(12),
                   ),
                   Text(
                     "Didn't get the Code?",
